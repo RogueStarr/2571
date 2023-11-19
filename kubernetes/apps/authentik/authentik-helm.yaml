@@ -128,13 +128,13 @@ authentik:
     # -- postgresql Username
     # @default -- `authentik`
     user: "authentik"
-    password: "!sph3r3#@2023"
+    password: ""
     port: 5432
   redis:
     # -- set the redis hostname to talk to
     # @default -- `{{ .Release.Name }}-redis-master`
     host: "{{ .Release.Name }}-redis-master"
-    password: "!sph3r3#@2023"
+    password: ""
 
 # -- List of config maps to mount blueprints from. Only keys in the
 # configmap ending with ".yaml" wil be discovered and applied
@@ -143,7 +143,7 @@ blueprints: []
 # -- see configuration options at https://goauthentik.io/docs/installation/configuration/
 env:
   AUTHENTIK_BOOTSTRAP_PASSWORD: "!sph3r3#@2023"
-  AUTHENTIK_BOOTSTRAP_TOKEN: "!sph3r3#@2023"
+  AUTHENTIK_BOOTSTRAP_TOKEN: ""
 # AUTHENTIK_VAR_NAME: VALUE
 
 envFrom: []
@@ -293,7 +293,7 @@ postgresql:
   enabled: false
   postgresqlMaxConnections: 500
   postgresqlUsername: "authentik"
-  postgresqlPassword: "!sph3r3#@2023"
+  postgresqlPassword: ""
   postgresqlDatabase: "authentik"
   persistence:
     size: 1Gi
