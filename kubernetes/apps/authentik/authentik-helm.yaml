@@ -141,9 +141,9 @@ authentik:
 blueprints: []
 
 # -- see configuration options at https://goauthentik.io/docs/installation/configuration/
-env: {}
-      AUTHENTIK_BOOTSTRAP_PASSWORD: "!sph3r3#@2023"
-      AUTHENTIK_BOOTSTRAP_TOKEN: "!sph3r3#@2023"
+env:
+  AUTHENTIK_BOOTSTRAP_PASSWORD: "!sph3r3#@2023"
+  AUTHENTIK_BOOTSTRAP_TOKEN: "!sph3r3#@2023"
 # AUTHENTIK_VAR_NAME: VALUE
 
 envFrom: []
