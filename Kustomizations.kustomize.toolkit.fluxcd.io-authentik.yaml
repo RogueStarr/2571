@@ -1,0 +1,38 @@
+piVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  creationTimestamp: "2023-11-19T02:34:05Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  name: authentik
+  namespace: flux-system
+  resourceVersion: "2851125"
+  uid: d60d6fa7-22ab-4f8c-b6ed-7163ebf385f2
+spec:
+  force: false
+  interval: 1m0s
+  path: ./authentik
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: home-kubernetes
+    namespace: flux-system
+  targetNamespace: flux-system
+status:
+  conditions:
+  - lastTransitionTime: "2023-11-19T02:41:07Z"
+    message: Fetching manifests for revision main@sha1:540fdc9966405d07df6d9485d4cda0cc85891d21
+      with a timeout of 30s
+    observedGeneration: 1
+    reason: ProgressingWithRetry
+    status: "True"
+    type: Reconciling
+  - lastTransitionTime: "2023-11-19T02:41:07Z"
+    message: 'kustomization path not found: stat /tmp/kustomization-2846418253/authentik:
+      no such file or directory'
+    observedGeneration: 1
+    reason: ArtifactFailed
+    status: "False"
+    type: Ready
+  observedGeneration: -1
